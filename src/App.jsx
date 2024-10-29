@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Recipe from './Recipe';
+import './App.css';
 
 function App() {
   const [query, setQuery] = useState('');
@@ -21,8 +22,10 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 p-6">
-      <h1 className="text-4xl font-bold text-center mb-8 text-gray-800">Recipe Finder</h1>
+    
+      <div className="w-full min-h-screen bg-cover bg-center bg-fixed dim-bg">
+      
+      <h1 className="text-4xl font-bold text-center mb-8 text-white">Recipe Finder</h1>
       <div className="max-w-md mx-auto mb-8 flex items-center space-x-4">
         <input 
           type="text" 
@@ -44,6 +47,7 @@ function App() {
         ))}
       </div>
     </div>
+    
   );
 }
 
